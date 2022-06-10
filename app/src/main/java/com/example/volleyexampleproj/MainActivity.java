@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean MakeManySimpleVolleyRequest() {
         for (int i = 1; i <= 100; i++) {
             SimpleVolley.SimpleRequest(this, "https://jsonplaceholder.typicode.com/posts/" + i);
+            AddToListView("proof of async: " + i);
         }
         return true;
     }
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean MakeManySingleVolleyRequest() {
         for (int i = 1; i <= 100; i++) {
             SingletonVolley.SingletonRequest(this, "https://jsonplaceholder.typicode.com/posts/" + i);
+            AddToListView("proof of async: " + i);
         }
         return true;
     }

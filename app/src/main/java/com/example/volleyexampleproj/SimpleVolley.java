@@ -10,10 +10,11 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 public class SimpleVolley {
+    static RequestQueue queue;
 
-    public static void SimpleRequest(Context context, String url){
+    public static void SimpleRequest(Context context, String url) {
         // Instantiate the RequestQueue.
-        RequestQueue queue = Volley.newRequestQueue(context);
+         queue = Volley.newRequestQueue(context);
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
